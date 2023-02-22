@@ -20,8 +20,16 @@ public class MetodusokGyak {
         kiir("%d + %d + %d + %d = %d".formatted(szam1, szam2, szam3, szam3, osszeg));
         
         
-        //osszeg = gyokvonas(int eredmeny);
-       // int eredmeny = gyokvonas(sint a, int b, int c, int eredmeny);
+        
+       //osszeg = gyokvonas(int eredmeny);
+       //int eredmeny = gyokvonas(sint a, int b, int c, int eredmeny);
+       int a = 3, b = 4, c = 2;
+       osszeg = osszead(a,b);
+       osszeg = osszead(osszeg, c);
+       String s ="%d + %d + %d gyöke".formatted(a, b, c);
+       double gyok = Math.sqrt(osszeg);
+       String kimenet = String.format("%s %.4f\n",s, gyok );
+        kiir(kimenet);
                 
     }
     
@@ -46,10 +54,4 @@ public class MetodusokGyak {
         System.out.printf(szoveg +"\n");
     }   
 
-    private static int gyokvonas(int a, int b, int c, int eredmeny) {
-        int osszeg = a+b+c;
-        int gyok = Math.abs(osszeg);
-        
-        return gyok;
-    }
 }
