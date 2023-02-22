@@ -3,7 +3,11 @@ package metodusokgyak;
 public class MetodusokGyak {
 
     public static void main(String[] args) {
-        int osszeg = elso10SzamOsszege();
+        feladatok();
+    }
+    
+     private static void feladatok() {
+         int osszeg = elso10SzamOsszege();
         String szoveg = "Az első 10 szám összege" + osszeg;
         kiir(szoveg);
         
@@ -12,17 +16,12 @@ public class MetodusokGyak {
         szoveg = ("%d + %d = %d".formatted(szam1, szam2, osszeg));
         kiir(szoveg);
         
-        
-        
         osszeg = osszead(1, 2);
         osszeg = osszead(osszeg, szam3);
         osszeg = osszead(osszeg, szam4); 
         kiir("%d + %d + %d + %d = %d".formatted(szam1, szam2, szam3, szam3, osszeg));
-        
-        
-        
-       //osszeg = gyokvonas(int eredmeny);
-       //int eredmeny = gyokvonas(sint a, int b, int c, int eredmeny);
+               
+       
        int a = 3, b = 4, c = 2;
        osszeg = osszead(a,b);
        osszeg = osszead(osszeg, c);
@@ -30,7 +29,7 @@ public class MetodusokGyak {
        double gyok = Math.sqrt(osszeg);
        String kimenet = String.format("%s %.4f\n",s, gyok );
         kiir(kimenet);
-                
+        
     }
     
     private static int elso10SzamOsszege(){
@@ -41,10 +40,6 @@ public class MetodusokGyak {
         return osszeg;        
     }
 
-//    private static void eredmenyKiiras(int osszeg) {
-//        System.out.printf("Az első 10 szám összege %d\n",osszeg);
-//    }
-
     private static int osszead(int a, int b) {      
         
         return a + b;
@@ -54,4 +49,5 @@ public class MetodusokGyak {
         System.out.printf(szoveg +"\n");
     }   
 
+   
 }
