@@ -7,14 +7,18 @@ public class MetodusokGyak {
         String szoveg = "Az első 10 szám összege" + osszeg;
         kiir(szoveg);
         
-        int szam1 = 2, szam2 = 3, szam3 = 4, szam4 = 3;
+        int szam1 = 1, szam2 = 2, szam3 = 4, szam4 = 3;        
         osszeg = osszead(szam1, szam2);
         szoveg = ("%d + %d = %d".formatted(szam1, szam2, osszeg));
         kiir(szoveg);
         
-        osszeg = szamokOsszeadasa(szam1, szam2, szam3, szam4);
-        szoveg = ("%d + %d + %d + %d = %d".formatted(szam1, szam2, szam3, szam4, osszeg));
-        kiir(szoveg);
+        
+        
+        osszeg = osszead(1, 2);
+        osszeg = osszead(osszeg, szam3);
+        osszeg = osszead(osszeg, szam4); 
+        kiir("%d + %d + %d + %d = %d".formatted(szam1, szam2, szam3, szam3, osszeg));
+        
         
         //osszeg = gyokvonas(int eredmeny);
        // int eredmeny = gyokvonas(sint a, int b, int c, int eredmeny);
@@ -33,17 +37,14 @@ public class MetodusokGyak {
 //        System.out.printf("Az első 10 szám összege %d\n",osszeg);
 //    }
 
-    private static int osszead(int a, int b) {        
+    private static int osszead(int a, int b) {      
+        
         return a + b;
     }
     
     private static void kiir(String szoveg) {
         System.out.printf(szoveg +"\n");
-    }
-
-    private static int szamokOsszeadasa(int a, int b, int c, int d) {
-        return a+b+c+d;
-    }
+    }   
 
     private static int gyokvonas(int a, int b, int c, int eredmeny) {
         int osszeg = a+b+c;
