@@ -25,10 +25,10 @@ public class Equalizer {
     
     private static void TulterhelésesValtozat() {
         eq();
+        eq(8, true);
         eq(12);
-        eq();
-        eq(8);
-        eq();
+        eq(true);
+        eq(false);
         
     }
 
@@ -46,7 +46,19 @@ public class Equalizer {
     private static void eq() {
         int db = rnd.nextInt(3, 8);
         eq(db);        
+    }  
+    
+    private static void eq(boolean igaz) {
+        if (igaz == true) {
+            eq(4);
+        }else{
+            eq();        
+        }     
     }   
+    //rivate static void eq(int szam, boolean igaz) {
+        
+    //}
+    
     
     private static int RandomSzam() {
         int mennyiseg = rnd.nextInt(3, 8);
